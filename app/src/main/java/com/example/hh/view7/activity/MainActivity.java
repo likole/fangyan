@@ -147,7 +147,7 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
         mNavigationView = $(R.id.navigation_view);
 
 
-        mToolbar.setTitle("首页");
+        mToolbar.setTitle("方言識別");
 
         //这句一定要在下面几句之前调用，不然就会出现点击无反应
         setSupportActionBar(mToolbar);
