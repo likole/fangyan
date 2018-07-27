@@ -1,0 +1,111 @@
+<resources>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!--
+    <string name="pre_refresh_data" translatable="false">refresh_data</string>
+    <string name="pre_get_image" translatable="false">get_image</string>
+    <string name="pre_cache_size" translatable="false">cache_size</string>
+    <string name="pre_feedback" translatable="false">feedback</string>
+    <string name="pre_author" translatable="false">author</string>
+    <string name="pre_version" translatable="false">version</string>
+    <string name="pre_nav_color" translatable="false">pre_nav_color</string>
+    <string name="pre_use_local" translatable="false">pre_use_local</string>
+    <string name="pre_status_bar" translatable="false">pre_status_bar</string>
+
+
+    <string name="about_msg">1．系统登录管理；\n2．公司图书资料信息录入、借阅管理、检索查找、修改和删除；\n3．公司图书资料信息的图像拍摄、保存和阅览；\n4. 公司图书资料信息的数据维护和导入导出等功能。</string>
+    Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <!--
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+   Example settings for Data & Sync -->
+    <!--
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+     Example settings for Notifications -->
+    <!--
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+    <string name="title_activity_login">Sign in</string>
+
+     Strings related to login -->
+    <!--
+    <string name="prompt_email">账号</string>
+    <string name="prompt_password">密码</string>
+    <string name="action_sign_in">登录系统</string>
+    <string name="action_sign_in_short">登录</string>
+    <string name="error_invalid_email">账号不合法</string>
+    <string name="error_invalid_password">密码太短</string>
+    <string name="error_incorrect_password">密码错误或网络错误</string>
+    <string name="error_field_required">该项必填</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+-->
+    <string name="app_name">方言识别</string>
+    <string name="ok">播放完成</string>
+    <string name="hello_world">这是一款特别的语言检测App-->来一波午夜凶铃的语言检测呀，欢迎留言，哈哈哈哈哈^-^</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="tab_menu_alert">首页</string>
+
+    <string name="tab_menu_profile">识别</string>
+
+    <string name="tab_menu_pay">微趣</string>
+
+    <string name="tab_menu_setting">设置</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
