@@ -16,6 +16,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.example.hh.view7.R;
+import com.example.hh.view7.adapter.MyFragmentPagerAdapter;
 import com.example.hh.view7.fragment.LoginFragment;
 import com.example.hh.view7.fragment.StringFragment;
 import com.example.hh.view7.util.SnackBarUtils;

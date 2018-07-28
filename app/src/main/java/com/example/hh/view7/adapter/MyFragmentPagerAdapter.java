@@ -1,9 +1,15 @@
-package com.example.hh.view7.activity;
+package com.example.hh.view7.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.view.ViewGroup;
+
+import com.example.hh.view7.activity.MainActivity;
+import com.example.hh.view7.fragment.MyFragment1;
+import com.example.hh.view7.fragment.MyFragment2;
+import com.example.hh.view7.fragment.MyFragment3;
+import com.example.hh.view7.fragment.MyFragment4;
 
 /**
  * Created by Jay on 2015/8/31 0031.

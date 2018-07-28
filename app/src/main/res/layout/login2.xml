@@ -58,7 +58,7 @@
                 android:layout_alignParentRight="true"
                 android:background="#00808080"
                 android:text="  |  发送验证码"
-                android:textColor="#3232CD"
+                android:textColor="#0a7e07"
                 android:textSize="15sp" />
 
         </RelativeLayout>
@@ -100,7 +100,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="同意使用条款和隐私政策"
-                android:textColor="#3232CD"
+                android:textColor="#0a7e07"
                 android:paddingTop="10dp"
                 android:layout_alignParentRight="true"/>
         </RelativeLayout>
@@ -108,7 +108,7 @@
     <Button
         android:layout_marginTop="30pt"
         android:id="@id/button5"
-        android:background="#3232CD"
+        android:background="#0a7e07"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="#C0C0C0"

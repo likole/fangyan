@@ -1,4 +1,4 @@
-package com.example.hh.view7.activity;
+package com.example.hh.view7.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -10,17 +10,16 @@ import android.widget.TextView;
 
 import com.example.hh.view7.R;
 
-/**
- * Created by Jay on 2015/8/28 0028.
- */
-public class MyFragment3 extends Fragment {
 
-    public MyFragment3() {
+public class MyFragment4 extends Fragment {
+
+    public MyFragment4() {
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.mf3,container,false);
+        View view = inflater.inflate(R.layout.mf4,container,false);
+
         return view;
     }
 }

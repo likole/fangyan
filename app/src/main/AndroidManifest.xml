@@ -39,12 +39,6 @@
     </intent-filter>
     </activity>
 
-        <activity
-            android:name=".fragment.mf4"
-
-            android:theme="@style/BaseTheme"
-           />
-
 
     </application>
 

@@ -1,4 +1,4 @@
-package com.example.hh.view7.activity;
+package com.example.hh.view7.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
