@@ -1,4 +1,4 @@
-package com.example.hh.view7.fragment;
+package com.example.hh.view7.bean;
 
 public class Icon {
     private int iId;

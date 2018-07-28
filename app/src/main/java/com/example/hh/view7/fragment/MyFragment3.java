@@ -1,18 +1,14 @@
 package com.example.hh.view7.fragment;
 
-import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.hh.view7.R;
+import com.example.hh.view7.adapter.MyAdapter;
+import com.example.hh.view7.bean.Icon;
 
 import java.util.ArrayList;
 

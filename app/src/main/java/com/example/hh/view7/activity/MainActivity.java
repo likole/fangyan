@@ -18,7 +18,6 @@ import android.widget.RadioGroup;
 import com.example.hh.view7.R;
 import com.example.hh.view7.adapter.MyFragmentPagerAdapter;
 import com.example.hh.view7.fragment.LoginFragment;
-import com.example.hh.view7.fragment.StringFragment;
 import com.example.hh.view7.util.SnackBarUtils;
 import com.example.hh.view7.util.ViewUtils;
 
@@ -179,7 +178,7 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
     //init the default checked fragment
     private void initDefaultFragment() {
         Log.i(TAG, "initDefaultFragment");
-        mCurrentFragment = ViewUtils.createFragment(StringFragment.class);
+//        mCurrentFragment = ViewUtils.createFragment(StringFragment.class);
 
         mFragmentManager.beginTransaction().add(R.id.frame_content, mCurrentFragment).commit();
         mPreMenuItem = mNavigationView.getMenu().getItem(0);
@@ -198,7 +197,7 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
                 switch (item.getItemId()) {
                     case R.id.navigation_item_home:
                         mToolbar.setTitle("首页");
-                        switchFragment(StringFragment.class);
+//                        switchFragment(StringFragment.class);
                         break;
                     case R.id.navigation_item_addbook:
                         mToolbar.setTitle("lalala");

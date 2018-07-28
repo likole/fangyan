@@ -1,4 +1,4 @@
-package com.example.hh.view7.fragment;
+package com.example.hh.view7.adapter;
 
 import android.content.Context;
 import android.util.SparseArray;
@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.hh.view7.R;
+import com.example.hh.view7.bean.Icon;
 
 import java.util.ArrayList;
 
