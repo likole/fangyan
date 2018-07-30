@@ -4,6 +4,11 @@ public class Bean3 {
     private String content;
     private String url;
 
+    public Bean3(String content, String url) {
+        this.content = content;
+        this.url = url;
+    }
+
     public String getContent() {
         return content;
     }

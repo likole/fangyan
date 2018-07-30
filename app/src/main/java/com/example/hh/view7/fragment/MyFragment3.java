@@ -1,6 +1,8 @@
 package com.example.hh.view7.fragment;
 
+import android.app.Activity;
 import android.graphics.Color;
+import android.hardware.fingerprint.FingerprintManager;
 import android.os.Handler;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.View;
@@ -13,7 +15,9 @@ import android.widget.Toast;
 
 import com.example.hh.view7.R;
 import com.example.hh.view7.activity.BaseActivity;
+import com.example.hh.view7.adapter.My3Adapter;
 import com.example.hh.view7.adapter.MyAdapter;
+import com.example.hh.view7.bean.Bean3;
 import com.example.hh.view7.bean.Icon;
 
 import java.util.ArrayList;
@@ -26,7 +30,7 @@ public class MyFragment3 extends BaseFragment {
 
     SwipeRefreshLayout swipeRefreshLayout;
     ListView listView;
-    private BaseActivity parentActivity;
+    private Activity parentActivity;
 
      private GridView grid_photo2;
     private BaseAdapter mAdapter2 = null;
@@ -49,30 +53,36 @@ public class MyFragment3 extends BaseFragment {
 
     @Override
     protected void setUpData() {
-        final List<String> dataList=new ArrayList<>();
-        dataList.add("");
-        dataList.add("据媒体报道，语言识别在联盟炸开了");
-        dataList.add("许多背井离乡的学子认为语音识别提升自己家乡自豪感");
+//        final List<String> dataList=new ArrayList<>();
+//        dataList.add("");
+//        dataList.add("据媒体报道，语言识别在联盟炸开了");
+//        dataList.add("许多背井离乡的学子认为语音识别提升自己家乡自豪感");
+        final ArrayList<Bean3> dataList=new ArrayList<Bean3>();
+        dataList.add(new Bean3("",""));
+        dataList.add(new Bean3("baidu","http://www.baidu.com"));
+        dataList.add(new Bean3("oj","http://106.15.228.191"));
+
         Toast.makeText(parentActivity,"下拉获取更多内容",Toast.LENGTH_LONG).show();
 
-        final ArrayAdapter<String> adapter0= new ArrayAdapter<String>(parentActivity,android.R.layout.simple_list_item_1,android.R.id.text1,dataList);
+//        final ArrayAdapter<String> adapter0= new ArrayAdapter<String>(parentActivity,android.R.layout.simple_list_item_1,android.R.id.text1,dataList);
+        final My3Adapter adapter0=new My3Adapter(dataList,getMContext());
         listView.setAdapter(adapter0);
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener(){
 
 
             @Override
             public void onRefresh() {
-                new Handler().postDelayed(new Runnable(){
-                    public void run(){
-                        swipeRefreshLayout.setRefreshing(false);
-                        Toast.makeText(parentActivity,"加载完成",Toast.LENGTH_LONG).show();
-                        for(int i=0;i<10;i++)
-                        {
-                            dataList.add("识别小BUG，请前往212拯救~");
-                        }
-                        adapter0.notifyDataSetChanged();
-                    }
-                },4000);
+//                new Handler().postDelayed(new Runnable(){
+//                    public void run(){
+//                        swipeRefreshLayout.setRefreshing(false);
+//                        Toast.makeText(parentActivity,"加载完成",Toast.LENGTH_LONG).show();
+//                        for(int i=0;i<10;i++)
+//                        {
+//                            dataList.add("识别小BUG，请前往212拯救~");
+//                        }
+//                        adapter0.notifyDataSetChanged();
+//                    }
+//                },4000);
             }
         });
         swipeRefreshLayout.setColorSchemeColors(Color.RED,Color.BLUE,Color.GREEN);
