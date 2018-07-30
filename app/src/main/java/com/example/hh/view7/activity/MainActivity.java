@@ -1,5 +1,6 @@
 package com.example.hh.view7.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -77,6 +78,7 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
         vpager.setAdapter(mfAdapter);
         vpager.setCurrentItem(0);
         vpager.addOnPageChangeListener(this);
+
     }
 
     @Override
@@ -196,12 +198,16 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
                 }
                 switch (item.getItemId()) {
                     case R.id.navigation_item_home:
-                        mToolbar.setTitle("首页");
-//                        switchFragment(StringFragment.class);
+                        Intent intent=new Intent(MainActivity.this,MainActivity.class);
+                        startActivity(intent);
+                        break;
+                    case R.id.navigation_item_user:
+                        Intent intent2=new Intent(MainActivity.this,login.class);
+                        startActivity(intent2);
                         break;
                     case R.id.navigation_item_addbook:
-                        mToolbar.setTitle("lalala");
-                        switchFragment(LoginFragment.class);
+                        Intent intent3=new Intent(MainActivity.this,login.class);
+                        startActivity(intent3);
                         break;
                     default:
                         break;

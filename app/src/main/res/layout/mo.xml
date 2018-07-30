@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="AI语言 识别？"
+        android:textSize="17dp"
+        />
+
+    <CheckBox
+        android:id="@+id/checkBox6"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:hint="这款应用会比抖音火吗！！！！"
+        android:textSize="17dp"
+        />
+
+    <CheckBox
+        android:id="@+id/checkBox1"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:hint="和我们语言一样吗？！"
+        android:textSize="17dp"
+        />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:hint="发展---》新高度"
+        android:textSize="17dp"
+        />
+
+    <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:hint="现在的语言识别真的可以跟我们比吗？！"
+        android:textSize="17dp"
+       />
+
+    <CheckBox
+        android:id="@+id/checkBox4"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:hint="如何提升语音的交互用户体验~-~"
+        android:textSize="17dp"
+        />
+
+    <CheckBox
+        android:id="@+id/checkBox5"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:hint="语言识别用途。。。。"
+        android:textSize="17dp"
+       />
+
+    <CheckBox
+        android:id="@+id/checkBox7"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:hint="人的寂寞有时候很难用语言表达"
+        android:textSize="17dp"
+        />
+
+    <TextView
+        android:id="@+id/hello11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:singleLine="true"
+        android:text="@string/hello_world"
+        android:textColor="#336666"
+        />
+
+</TableLayout>

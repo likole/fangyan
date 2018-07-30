@@ -46,7 +46,7 @@ public class MainActivity1  extends AppCompatActivity {
     }
 
 
-    //自定义一个GestureListener,这个是View类下的，别写错哦！！！
+    //自定义一个GestureListener,这个是View类下的
     private class MyGestureListener extends GestureDetector.SimpleOnGestureListener {
         @Override
         public boolean onFling(MotionEvent e1, MotionEvent e2, float v, float v1) {

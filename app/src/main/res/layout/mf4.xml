@@ -1,12 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/md_grey_300"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="设置"
+        android:textSize="25sp"/>
+<RelativeLayout
+    android:layout_marginTop="30dp"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <RelativeLayout
+        android:id="@+id/r1"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/manage"/>
 
     <Button
+        android:layout_toRightOf="@+id/img1"
+        android:layout_marginLeft="5dp"
+        android:background="@color/white"
         android:id="@+id/button"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Button" />
+        android:gravity="left"
+        android:textSize="25sp"
+        android:layout_marginTop="10dp"
+        android:text="账号管理" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/r1"
+        android:id="@+id/r2"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img2"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/about"/>
+    <Button
+        android:layout_toRightOf="@+id/img2"
+        android:layout_marginLeft="5dp"
+        android:background="@color/white"
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:textSize="25sp"
+        android:layout_marginTop="10dp"
+        android:text="关于" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_below="@+id/r2"
+        android:id="@+id/r3"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img3"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/pingjia"/>
+
+    <Button
+        android:layout_toRightOf="@+id/img3"
+        android:layout_marginLeft="5dp"
+        android:background="@color/white"
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:textSize="25sp"
+        android:layout_marginTop="10dp"
+        android:text="用户体验与评价" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/r3"
+        android:id="@+id/r4"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img4"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/back"/>
+    <Button
+        android:layout_toRightOf="@+id/img4"
+        android:layout_marginLeft="5dp"
+        android:background="@color/white"
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:textSize="25sp"
+        android:layout_marginTop="10dp"
+        android:text="退出" />
+
+</RelativeLayout>
+</RelativeLayout>
 </LinearLayout>

@@ -7,11 +7,11 @@
             android:id="@+id/navigation_item_home"
             android:icon="@drawable/prime"
             android:title="首页" />
+
         <item
             android:id="@+id/navigation_item_user"
             android:icon="@drawable/account"
             android:title="用户管理" />
-
         <item android:title="方言识别">
             <menu>
                 <item

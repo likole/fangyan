@@ -1,25 +1,64 @@
 package com.example.hh.view7.fragment;
 
-import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.util.Log;
-import android.view.LayoutInflater;
+
+import android.content.Context;
+import android.content.Intent;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
+import android.widget.Button;
+import android.widget.ListView;
+;
 
 import com.example.hh.view7.R;
+import com.example.hh.view7.activity.BaseActivity;
+import com.example.hh.view7.activity.MainActivity;
+import com.example.hh.view7.activity.MainActivity1;
+import com.example.hh.view7.activity.Mo;
+import com.example.hh.view7.activity.login;
+import com.example.hh.view7.adapter.MyAdapter;
+import com.example.hh.view7.bean.Icon;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
 
 
-public class MyFragment4 extends Fragment {
+public class MyFragment4 extends BaseFragment {
 
-    public MyFragment4() {
+    private Button button;
+    private Button button1;
+    private Button button2;
+    private Button button3;
+    private BaseActivity parentActivity;
+    @Override
+    protected int setLayoutResourceID() {
+        return R.layout.mf4;
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.mf4,container,false);
+    protected void setUpView() {
+        parentActivity = (BaseActivity) getActivity();
+        button=$(R.id.button);
+        button1=$(R.id.button1);
+        button2=$(R.id.button2);
+        button3=$(R.id.button3);
+    }
 
-        return view;
+    @Override
+    protected void setUpData() {
+   button.setOnClickListener(new View.OnClickListener() {
+       @Override
+       public void onClick(View v) {
+           Intent intent=new Intent(parentActivity, login.class);
+           startActivity(intent);
+       }
+   });
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent2=new Intent(parentActivity, Mo.class);
+                startActivity(intent2);
+            }
+        });
     }
 }
