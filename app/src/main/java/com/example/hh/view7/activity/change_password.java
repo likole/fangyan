@@ -8,16 +8,22 @@ import android.widget.EditText;
 
 import com.example.hh.view7.R;
 
-public class pingjia extends AppCompatActivity {
-    private EditText edit;
+public class change_password extends AppCompatActivity {
+
+    private EditText edit1;
+    private EditText edit2;
+    private EditText edit3;
     private Button bt;
 
 
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.pingjia);
+        setContentView(R.layout.change_passord);
 
-        edit=(EditText)findViewById(R.id.editSms);
+        edit1=(EditText)findViewById(R.id.change_ed1);
+        edit2=(EditText)findViewById(R.id.change_ed2);
+        edit3=(EditText)findViewById(R.id.change_ed3);
         bt=(Button)findViewById(R.id.button);
 
         bt.setOnClickListener(new View.OnClickListener() {

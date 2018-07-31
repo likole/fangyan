@@ -23,36 +23,52 @@
     </android.support.design.widget.AppBarLayout>
 
     <TextView
-        android:id="@+id/text"
-        android:layout_marginTop="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginLeft="30dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="25sp"
-        android:text="用户评价"/>
-
-    <EditText
-        android:id="@+id/editSms"
-        android:layout_marginTop="30dp"
-        android:layout_width="fill_parent"
+        android:text="修改密码"
+        android:layout_marginLeft="10dp"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
-        android:hint="亲 *_* ,请输入您的宝贵意见哦"
-        android:inputType="textMultiLine"
-        android:gravity="left|top"
-        android:background="#90eceff1"
-        android:minLines="10" />
+        android:background="#808080"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="80dp"
+        >
+        <EditText
+            android:hint="输入手机号"
+            android:id="@+id/change_ed1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            />
+        <EditText
+            android:hint="输入原密码"
+            android:id="@+id/change_ed2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:layout_below="@+id/change_ed1"
+            />
+        <EditText
+            android:hint="输入新密码"
+            android:id="@+id/change_ed3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:layout_below="@+id/change_ed2"
+            />
 
+    </RelativeLayout>
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="提交"
+        android:layout_marginLeft="23dp"
+        android:layout_marginRight="23dp"
+        android:layout_marginTop="100dp"
         android:background="@color/colorPrimary"
-        android:layout_marginRight="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="100dp"/>
-
-    </LinearLayout>
+        android:text="提交"/>
+</LinearLayout>

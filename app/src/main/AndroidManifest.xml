@@ -37,6 +37,10 @@
         <activity android:name=".activity.login2"/>
         <activity android:name=".activity.Mo"/>
         <activity android:name=".activity.BrowserActivity"/>
+        <activity android:name=".activity.change_password"/>
+        <activity android:name=".activity.manage_zhu"/>
+        <activity android:name=".activity.pingjia"/>
+
     </application>
 
 </manifest>

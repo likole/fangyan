@@ -68,7 +68,7 @@
         android:gravity="left"
         android:textSize="25sp"
         android:layout_marginTop="10dp"
-        android:text="关于" />
+        android:text="关于我们" />
     </RelativeLayout>
 
 
@@ -95,7 +95,7 @@
         android:gravity="left"
         android:textSize="25sp"
         android:layout_marginTop="10dp"
-        android:text="用户体验与评价" />
+        android:text="用户反馈与评价" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -120,7 +120,7 @@
         android:gravity="left"
         android:textSize="25sp"
         android:layout_marginTop="10dp"
-        android:text="退出" />
+        android:text="退出程序" />
 
 </RelativeLayout>
 </RelativeLayout>
