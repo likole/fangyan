@@ -18,6 +18,7 @@ import android.widget.RadioGroup;
 
 import com.example.hh.view7.R;
 import com.example.hh.view7.adapter.MyFragmentPagerAdapter;
+import com.example.hh.view7.fragment.MyFragment1;
 import com.example.hh.view7.util.SnackBarUtils;
 import com.example.hh.view7.util.ViewUtils;
 
@@ -197,8 +198,8 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
                 }
                 switch (item.getItemId()) {
                     case R.id.navigation_item_home:
-                        Intent intent=new Intent(MainActivity.this,MainActivity.class);
-                        startActivity(intent);
+                        Intent intent1=new Intent(MainActivity.this,MainActivity.class);
+                        startActivity(intent1);
                         break;
                     case R.id.navigation_item_user:
                         Intent intent2=new Intent(MainActivity.this,manage_zhu.class);
@@ -217,7 +218,7 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
                         startActivity(intent5);
                         break;
                     case R.id.navigation_item_logout:
-                        Intent intent6=new Intent(MainActivity.this,login.class);
+                        Intent intent6=new Intent(MainActivity.this,AgentApplication.class);
                         startActivity(intent6);
                         break;
 

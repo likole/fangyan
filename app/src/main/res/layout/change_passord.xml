@@ -11,6 +11,15 @@
         android:layout_height="?attr/actionBarSize"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:text="修改密码"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            />
+
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
@@ -22,13 +31,7 @@
             app:titleTextColor="#ffffff" />
     </android.support.design.widget.AppBarLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="25sp"
-        android:text="修改密码"
-        android:layout_marginLeft="10dp"
-        />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -38,20 +41,23 @@
         android:layout_marginTop="80dp"
         >
         <EditText
-            android:hint="输入手机号"
+            android:hint="用户名"
             android:id="@+id/change_ed1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="25sp"
+            android:inputType="textPassword"
             />
+
         <EditText
-            android:hint="输入原密码"
-            android:id="@+id/change_ed2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="25sp"
-            android:layout_below="@+id/change_ed1"
-            />
+        android:hint="输入原密码"
+        android:id="@+id/change_ed2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:inputType="textPassword"
+        android:layout_below="@+id/change_ed1"
+        />
         <EditText
             android:hint="输入新密码"
             android:id="@+id/change_ed3"
@@ -59,6 +65,7 @@
             android:layout_height="wrap_content"
             android:textSize="25sp"
             android:layout_below="@+id/change_ed2"
+            android:inputType="textPassword"
             />
 
     </RelativeLayout>

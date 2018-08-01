@@ -11,6 +11,16 @@
         android:layout_height="?attr/actionBarSize"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:text="用户评价"
+            android:textSize="25sp" />
+
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
@@ -20,18 +30,17 @@
             app:layout_scrollFlags="scroll|enterAlways"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             app:titleTextColor="#ffffff" />
+
     </android.support.design.widget.AppBarLayout>
 
     <TextView
-        android:id="@+id/text"
-        android:layout_marginTop="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="25sp"
-        android:text="用户评价"/>
-
+        android:textSize="20sp"
+        android:text="您在体验过我们的产品之后，希望能给我们一些反馈和意见,以便我们可以完善我们的产品@(*-*)@"/>
     <EditText
         android:id="@+id/editSms"
         android:layout_marginTop="30dp"

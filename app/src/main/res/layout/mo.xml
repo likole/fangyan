@@ -10,6 +10,14 @@
         android:layout_height="?attr/actionBarSize"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" 关于我们"
+            android:layout_marginTop="15dp"
+            android:textSize="25sp"/>
+
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
@@ -19,7 +27,12 @@
             app:layout_scrollFlags="scroll|enterAlways"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             app:titleTextColor="#ffffff" />
+
+
+
     </android.support.design.widget.AppBarLayout>
+
+
 
     <CheckBox
         android:id="@+id/checkBox1"

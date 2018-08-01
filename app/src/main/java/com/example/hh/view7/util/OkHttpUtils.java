@@ -11,7 +11,7 @@ import okhttp3.Response;
 public class OkHttpUtils {
 
     private static OkHttpClient okHttpClient=new OkHttpClient();
-    public static final String BASE_URL="";
+    public static final String BASE_URL="http://47.93.23.231";
 
 
     public static Response doGet(String url){

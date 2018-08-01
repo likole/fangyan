@@ -24,8 +24,10 @@ public class login extends AppCompatActivity{
     private Button bt1;
     private Button bt2;
     private Button bt3;
-    private EditText cellphone;
-    private EditText password;
+    private EditText name;
+    private EditText pass;
+    private String username;
+    private String password;
 
 
     @Override
@@ -36,8 +38,10 @@ public class login extends AppCompatActivity{
         bt1=(Button)findViewById(R.id.zhuce);
         bt2=(Button)findViewById(R.id.wangji);
         bt3=findViewById(R.id.button3);
-        cellphone=(EditText)findViewById(R.id.editText2) ;
-        password=(EditText)findViewById(R.id.editText)
+        name=(EditText)findViewById(R.id.editText2) ;
+        pass=(EditText)findViewById(R.id.editText);
+        username=name.getText().toString();
+        password=pass.getText().toString();
 
         bt1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,7 +54,7 @@ public class login extends AppCompatActivity{
         bt2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent it=new Intent(login.this,login2.class);
+                Intent it=new Intent(login.this,forget_password.class);
                 startActivity(it);
             }
         });
@@ -62,8 +66,9 @@ public class login extends AppCompatActivity{
                     @Override
                     public void run() {
                         Map<String,String> map=new HashMap<>();
-                        map.put("username","1221212");
-                        Response response= OkHttpUtils.doPost("http://106.15.228.191",map);
+                        map.put("username",username);
+                        map.put("password",password);
+                        Response response= OkHttpUtils.doPost("/log_in.php",map);
                         try {
                             System.out.println(response.body().string());
                         } catch (Exception e) {

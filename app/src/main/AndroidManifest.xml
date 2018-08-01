@@ -40,7 +40,7 @@
         <activity android:name=".activity.change_password"/>
         <activity android:name=".activity.manage_zhu"/>
         <activity android:name=".activity.pingjia"/>
-
+        <activity android:name=".activity.forget_password"/>
     </application>
 
 </manifest>
