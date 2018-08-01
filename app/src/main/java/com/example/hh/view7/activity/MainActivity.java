@@ -206,7 +206,7 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
                         startActivity(intent2);
                         break;
                     case R.id.navigation_item_addbook:
-                        Intent intent3=new Intent(MainActivity.this,login.class);
+                        Intent intent3=new Intent(MainActivity.this,Music.class);
                         startActivity(intent3);
                         break;
                     case R.id.navigation_item_borrow:

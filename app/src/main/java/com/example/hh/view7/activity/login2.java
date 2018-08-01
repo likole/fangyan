@@ -42,15 +42,16 @@ public class login2 extends AppCompatActivity {
         editText10=(EditText)findViewById(R.id.editText10);
         bt=(Button)findViewById(R.id.button);
 
-        username=editText5.getText().toString();
-        password1=editText7.getText().toString();
-        password2=editText8.getText().toString();
-        school=editText9.getText().toString();
-        birthday=editText10.getText().toString();
+
 
         bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                username=editText5.getText().toString();
+                password1=editText7.getText().toString();
+                password2=editText8.getText().toString();
+                school=editText9.getText().toString();
+                birthday=editText10.getText().toString();
                 new Thread(new Runnable() {
                     @Override
                     public void run() {

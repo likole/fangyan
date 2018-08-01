@@ -40,8 +40,7 @@ public class login extends AppCompatActivity{
         bt3=findViewById(R.id.button3);
         name=(EditText)findViewById(R.id.editText2) ;
         pass=(EditText)findViewById(R.id.editText);
-        username=name.getText().toString();
-        password=pass.getText().toString();
+
 
         bt1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,15 +59,18 @@ public class login extends AppCompatActivity{
         });
 
         bt3.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
+                username=name.getText().toString();
+                password=pass.getText().toString();
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
                         Map<String,String> map=new HashMap<>();
                         map.put("username",username);
                         map.put("password",password);
-                        Response response= OkHttpUtils.doPost("/log_in.php",map);
+                        Response response= OkHttpUtils.doPost("/app/log_in.php",map);
                         try {
                             System.out.println(response.body().string());
                         } catch (Exception e) {
