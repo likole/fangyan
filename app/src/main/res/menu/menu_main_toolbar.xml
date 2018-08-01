@@ -9,14 +9,14 @@
     <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
-        android:enabled="false"
+        android:enabled="true"
         android:title="公司图书管理系统"
         app:showAsAction="never" />
 
     <item
         android:id="@+id/action_about"
         android:orderInCategory="101"
-        android:enabled="false"
+        android:enabled="true"
         android:title="Version:0.0.1"
         app:showAsAction="never" />
 </menu>

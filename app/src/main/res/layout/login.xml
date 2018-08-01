@@ -54,16 +54,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="手机号码"
+            android:inputType="phone"
             android:textSize="25dp" />
 
+
         <EditText
-            android:id="@+id/editText3"
+            android:id="@+id/editText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/editText2"
+            android:textSize="25dp"
             android:hint="密码"
-            android:textSize="25sp" />
-
+            android:layout_below="@+id/editText2"
+            android:inputType="textPassword" />
 
         <RelativeLayout
             android:layout_width="match_parent"
