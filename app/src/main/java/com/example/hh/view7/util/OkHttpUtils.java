@@ -1,11 +1,17 @@
 package com.example.hh.view7.util;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.Map;
 
+import okhttp3.Call;
+import okhttp3.Callback;
 import okhttp3.FormBody;
+import okhttp3.MediaType;
+import okhttp3.MultipartBody;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import okhttp3.RequestBody;
 import okhttp3.Response;
 
 public class OkHttpUtils {
@@ -44,6 +50,51 @@ public class OkHttpUtils {
         }
         return null;
     }
+
+    public static Response doPost(String url,File file,String mediaType){
+        MultipartBody.Builder builder = new MultipartBody.Builder()
+                .setType(MultipartBody.FORM)
+                .addFormDataPart("file", file.getName(),
+                        RequestBody.create(MediaType.parse(mediaType), file));
+
+        RequestBody requestBody = builder.build();
+
+        Request request = new Request.Builder()
+                .url(BASE_URL+url)
+                .post(requestBody)
+                .build();
+        try {
+            Response response= okHttpClient.newCall(request).execute();
+            return response;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public static Response doPost(String url,Map<String,String> params, File file,String mediaType){
+        MultipartBody.Builder builder = new MultipartBody.Builder()
+                .setType(MultipartBody.FORM)
+                .addFormDataPart("file", file.getName(),
+                        RequestBody.create(MediaType.parse(mediaType), file));
+        for(String s:params.keySet()){
+            builder.addFormDataPart(s,params.get(s));
+        }
+        RequestBody requestBody = builder.build();
+        Request request = new Request.Builder()
+                .url(BASE_URL+url)
+                .post(requestBody)
+                .build();
+        try {
+            Response response= okHttpClient.newCall(request).execute();
+            return response;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+
 
     public static Response doPost(String url, Map<String,String> params){
         FormBody.Builder formBody = new FormBody.Builder();

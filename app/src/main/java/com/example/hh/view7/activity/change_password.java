@@ -64,35 +64,35 @@ public class change_password extends AppCompatActivity {
                 username=edit1.getText().toString();
                 old_password=edit2.getText().toString();
                 new_password=edit3.getText().toString();
-                if(!old_password.equals(new_password))
-                {
-                    Toast.makeText(change_password.this,"两次密码不一致，请重新输入",Toast.LENGTH_LONG).show();
-                    return;
-                }
+
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
                         Map<String,String> map=new HashMap<>();
                         map.put("username",username);
+                        map.put("old_password",old_password);
                         map.put("new_password",new_password);
 
-                        Response response= OkHttpUtils.doPost("http://106.15.228.191",map);
+                        Response response= OkHttpUtils.doPost("/change.php",map);
                         String s=null;
                         try {
                            s=response.body().string();
+                           System.out.print(s);
+
+                            JsonObject root=(JsonObject)new JsonParser().parse(s);
+                            String ok=root.get("ok").getAsString();
+                            Message msg=new Message();
+                            if(ok.equals("true")){
+                                msg.what=1;
+                            }
+                            else if (ok.equals("false")){
+                                msg.what=0;
+                            }
+                            handler.sendMessage(msg);
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
-                        JsonObject root=(JsonObject)new JsonParser().parse(s);
-                        String ok=root.get("ok").getAsString();
-                        Message msg=new Message();
-                        if(ok.equals("true")){
-                            msg.what=1;
-                        }
-                        else if (ok.equals("false")){
-                            msg.what=0;
-                        }
-                        handler.sendMessage(msg);
+
                     }
                 }).start();
             }

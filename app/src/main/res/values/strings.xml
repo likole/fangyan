@@ -105,6 +105,8 @@
 
     <string name="tab_menu_setting">设置</string>
 
+    <string name="back">目前我们APP只能识别6种方言（长沙话、河北话、闽南话、客家话、上海话和南昌话六种地方方言）,对于其他各地的方言真的识别不了，请确保您的语言在我们识别的范围内｡◕‿◕｡</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 

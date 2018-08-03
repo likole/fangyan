@@ -50,7 +50,6 @@ public class MyFragment3 extends BaseFragment {
         swipeRefreshLayout = $(R.id.swid);
         listView = $(R.id.my_list_view);
 
-        grid_photo2 = $(R.id.grid_photo2);
     }
 
     @Override

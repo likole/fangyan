@@ -47,6 +47,9 @@ public class login2 extends AppCompatActivity {
                 case 0:
                     Toast.makeText(login2.this, "注册失败", Toast.LENGTH_LONG).show();
                     break;
+                case 2:
+                    Toast.makeText(login2.this, "账号已存在", Toast.LENGTH_LONG).show();
+                    break;
                 default:
                     break;
             }
@@ -76,11 +79,11 @@ public class login2 extends AppCompatActivity {
                 school=editText9.getText().toString();
                 birthday=editText10.getText().toString();
 
-                if(!password1.equals(password2))
-                {
-                    Toast.makeText(login2.this,"两次密码不一致，请重新输入",Toast.LENGTH_LONG).show();
-                   return;
+                if(!password1.equals(password2)) {
+                    Toast.makeText(login2.this, "两次密码不一致，请重新输入", Toast.LENGTH_LONG).show();
+                    return;
                 }
+
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
@@ -106,6 +109,10 @@ public class login2 extends AppCompatActivity {
                             else if(ok.equals("false"))
                             {
                                 msg.what=0;
+                            }
+                              else if(ok.equals("no"))
+                            {
+                                msg.what=2;
                             }
                             handler.sendMessage(msg);
                         } catch (IOException e) {

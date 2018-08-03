@@ -79,7 +79,7 @@ public class Mo extends AppCompatActivity {
                 {
                     //获得checkBox的文本内容
                     //String text= checkBox1.getText().toString();
-                    Toast.makeText(Mo.this, "由于技术水平和能力限制，该APP能识别的方言种类实在很少，但是随着经验的丰富，能力的提升我们有信心，在未来完成一个集更多语音为一身的功能强大的APP！@#￥%…*&", Toast.LENGTH_LONG).show();
+                    Toast.makeText(Mo.this, "由于技术水平和能力限制，该APP能识别的方言种类实在很少(づ◡ど)，但是随着经验的丰富，能力的提升我们有信心，在未来完成一个集更多语音为一身的功能强大的APP！@#￥%…*&", Toast.LENGTH_LONG).show();
                 }
 
             }
@@ -101,7 +101,7 @@ public class Mo extends AppCompatActivity {
                 {
                     //获得checkBox的文本内容
                     //String text= checkBox1.getText().toString();
-                    Toast.makeText(Mo.this, "用户的优质体验是对我们最大的肯定，尽管现在功能并没有很完善，但是，我们会继续完善性能，未来我们会努力实现多种方言语言的识别，对于一些方言进行方言翻译，方便用户使用，而且添加一些有趣的方言小应用，带给用户优质体验", Toast.LENGTH_LONG).show();
+                    Toast.makeText(Mo.this, "用户的优质体验是对我们最大的肯定，尽管现在功能并没有很完善，但是，我们会继续完善性能，未来我们会努力实现多种方言语言的识别，对于一些方言进行方言翻译，方便用户使用，而且添加一些有趣的方言小应用，带给用户优质体验(❁´︶`❁)", Toast.LENGTH_LONG).show();
                 }
 
             }
@@ -112,7 +112,7 @@ public class Mo extends AppCompatActivity {
                 {
                     //获得checkBox的文本内容
                     //String text= checkBox1.getText().toString();
-                    Toast.makeText(Mo.this, "语言识别的用途很多，例如可以作为方言翻译汉语的基础功能，还可以将来作为多语言交互的基础功能", Toast.LENGTH_LONG).show();
+                    Toast.makeText(Mo.this, "｡◕‿◕｡语言识别的用途很多，例如可以作为方言翻译汉语的基础功能，还可以将来作为多语言交互的基础功能", Toast.LENGTH_LONG).show();
                 }
 
             }
@@ -123,7 +123,7 @@ public class Mo extends AppCompatActivity {
                 {
                     //获得checkBox的文本内容
                     //String text= checkBox1.getText().toString();
-                    Toast.makeText(Mo.this, "开发过程中，不仅在方言识别技术上遇到过瓶颈，在APP制作上（采用原生APP开发，现在感觉有点傻。。。）以及安卓后台搭建都面临过困难，最终实现了基本功能，并呈现给用户。在未来的开发中，高品质的追求一直是我们追求的目标，我们会在再接再厉，希望大家继续支持我们", Toast.LENGTH_LONG).show();
+                    Toast.makeText(Mo.this, "开发过程中，不仅在方言识别技术上遇到过瓶颈，在APP制作上（采用原生APP开发，现在感觉有点傻。。。）以及安卓后台搭建都面临过困难，最终实现了基本功能，并呈现给用户。在未来的开发中，高品质的追求一直是我们追求的目标，我们会在再接再厉，希望大家继续支持我们♬♩♫♪☻(●´∀｀●）☺♪♫♩♬", Toast.LENGTH_LONG).show();
                 }
 
             }

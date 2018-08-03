@@ -57,7 +57,7 @@ public class pingjia extends AppCompatActivity {
                         Map<String,String> map=new HashMap<>();
                         map.put("pingjia",edittext);
 
-                          Response response= OkHttpUtils.doPost("http://106.15.228.191",map);
+                          Response response= OkHttpUtils.doPost("/pj.php",map);
                         String s= null;
                         try {
                             s = response.body().string();

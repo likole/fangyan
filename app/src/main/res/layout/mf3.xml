@@ -27,6 +27,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_toRightOf="@+id/img"
+                        android:layout_marginTop="10dp"
                         android:text="方言笑話"
                         android:textColor="@color/colorPrimary"
                         android:textSize="25dp" />
@@ -47,63 +48,5 @@
 
     </android.support.v4.widget.SwipeRefreshLayout>
 
-    <RelativeLayout
 
-                    android:orientation="horizontal"
-                    android:layout_below="@+id/swid"
-                    android:id="@+id/title2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/md_grey_200">
-
-                    <ImageView
-                        android:layout_marginTop="5dp"
-                        android:id="@+id/img2"
-                        android:src="@mipmap/map"
-                        android:layout_width="20pt"
-                        android:layout_height="20pt"
-                        />
-
-                    <TextView
-                        android:layout_toRightOf="@+id/img2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="方言地圖"
-                        android:textSize="25dp"
-                        android:textColor="@color/colorPrimary"/>
-
-                </RelativeLayout>
-
-                <GridView
-                    android:layout_below="@id/title2"
-                    android:id="@+id/grid_photo2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:numColumns="3" />
-
-    <RelativeLayout
-        android:orientation="horizontal"
-        android:layout_below="@+id/grid_photo2"
-        android:id="@+id/title3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white">
-
-        <ImageView
-            android:layout_marginTop="5dp"
-            android:id="@+id/img3"
-            android:src="@mipmap/music"
-            android:layout_width="20pt"
-            android:layout_height="20pt"
-            />
-
-        <TextView
-            android:layout_toRightOf="@+id/img3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="方言Music"
-            android:textSize="25dp"
-            android:textColor="@color/colorPrimary"/>
-
-    </RelativeLayout>
         </RelativeLayout>

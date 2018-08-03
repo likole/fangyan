@@ -3,7 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/bg"
     android:orientation="vertical">
 
 
@@ -45,13 +44,20 @@
         android:layout_marginLeft="20pt"
         android:layout_marginRight="20pt"
         android:layout_marginTop="10pt"
-        android:background="#808080"
+        android:background="@color/md_grey_100"
         android:orientation="vertical">
 
         <EditText
             android:id="@+id/editText5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="left"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:paddingLeft="55dp"
+            android:paddingTop="5dp"
+            android:background="@drawable/username"
             android:hint="用户名"
             android:textSize="23dp" />
 
@@ -62,6 +68,13 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="密码"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="left"
+            android:paddingLeft="55dp"
+            android:paddingTop="5dp"
+            android:background="@drawable/mima"
             android:inputType="textPassword"
             android:textSize="23dp" />
 
@@ -72,6 +85,13 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="再次输入密码"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="left"
+            android:paddingLeft="55dp"
+            android:paddingTop="5dp"
+            android:background="@drawable/mima"
             android:inputType="textPassword"
             android:textSize="23dp" />
 
@@ -91,17 +111,31 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="请输入您就读的小学"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="left"
+            android:paddingLeft="55dp"
+            android:paddingTop="10dp"
+            android:background="@drawable/mima"
             android:inputType="text"
-            android:textSize="19dp"/>
+            android:textSize="15dp"/>
 
         <EditText
             android:id="@+id/editText10"
             android:layout_below="@+id/editText9"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="请输入您父亲或母亲的出生生年月"
+            android:hint="请输入您父亲或母亲的出生年月"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="left"
+            android:paddingLeft="55dp"
+            android:paddingTop="10dp"
+            android:background="@drawable/mima"
             android:inputType="text"
-            android:textSize="19dp"/>
+            android:textSize="15dp"/>
             <TextView
                 android:layout_below="@+id/editText10"
                 android:layout_width="wrap_content"

@@ -5,18 +5,29 @@
     <!--android:id="@+id/action_search"-->
     <!--android:icon="@drawable/ic_search"-->
     <!--android:title="搜索"-->
-    <!--app:showAsAction="ifRoom" />-->
+    <!--app:showAsAction="ifRoom" /      android:orderInCategory="100">-->
+
+
     <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
+        android:id="@+id/action_about"
+        android:icon="@drawable/compass"
+        android:title="介绍"/>
+
+    <item
+        android:id="@+id/date"
         android:enabled="true"
+        android:icon="@drawable/fire"
         android:title="迷你日历"
         app:showAsAction="never" />
 
     <item
-        android:id="@+id/action_about"
-        android:orderInCategory="101"
-        android:enabled="true"
-        android:title="Version:0.0.1"
-        app:showAsAction="never" />
+        android:id="@+id/main_menu_3"
+        android:icon="@drawable/tu"
+        android:title="娱乐小新闻"/>
+    <item
+        android:id="@+id/main_menu_4"
+        android:icon="@drawable/tu"
+        android:title="吐血小邮箱"/>
+
+
 </menu>

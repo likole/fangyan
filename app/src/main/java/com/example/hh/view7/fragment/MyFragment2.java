@@ -1,9 +1,12 @@
 package com.example.hh.view7.fragment;
 
+import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.media.MediaRecorder;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
+import android.os.Message;
 import android.os.MessageQueue;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -15,13 +18,21 @@ import android.widget.AutoCompleteTextView;
 import android.widget.CompoundButton;
 import android.widget.ListAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import com.example.hh.view7.R;
 import com.example.hh.view7.activity.BaseActivity;
+import com.example.hh.view7.activity.MainActivity;
+import com.example.hh.view7.activity.login;
+import com.example.hh.view7.util.OkHttpUtils;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 
 import java.io.File;
 import java.io.IOException;
+
+import okhttp3.Response;
 
 import static android.os.Looper.getMainLooper;
 
@@ -38,8 +49,26 @@ public class MyFragment2 extends BaseFragment implements CompoundButton.OnChecke
 
     private TextView textView;
     private BaseActivity parentActivity;
+    File soundFile;
 
     AnimationDrawable drawable;
+
+    //***********/
+    private Handler handler =new Handler() {
+        public void handleMessage(android.os.Message msg) {
+            switch (msg.what) {
+                case 1:
+                    System.out.print("啦啦啦");
+                    Toast.makeText(parentActivity, "成功", Toast.LENGTH_LONG).show();
+                    break;
+                case 0:
+                    Toast.makeText(parentActivity, "失败", Toast.LENGTH_LONG).show();
+                    break;
+                default:
+                    break;
+            }
+        }
+    };
 
     @Override
     protected int setLayoutResourceID() {
@@ -82,6 +111,42 @@ public class MyFragment2 extends BaseFragment implements CompoundButton.OnChecke
         } else {
             drawable.stop();
             stopRecord();
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    Response response= OkHttpUtils.doPost("/upload_file.php",soundFile,"audio/amr");
+                    String s= null;
+                    /*try {
+                        s = response.body().string();
+                        System.out.println(s);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    if(s!=null)
+                        Toast.makeText(parentActivity,s,Toast.LENGTH_LONG).show();
+                    else
+                        Toast.makeText(parentActivity,"识别失败",Toast.LENGTH_LONG).show();*/
+                    try {
+                        s = response.body().string();
+                        System.out.println(s);
+                        JsonObject root = (JsonObject) new JsonParser().parse(s);
+                        String ok = root.get("ok").getAsString();
+                        Message msg = new Message();
+                        System.out.print(s);
+                        if(ok.equals("true"))
+                        {
+                            msg.what =1;
+                        }
+                        else if(ok.equals("false"))
+                        {
+                            msg.what=0;
+                        }
+                        handler.sendMessage(msg);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }).start();
             isStart =false;
         }
     }
@@ -92,15 +157,13 @@ public class MyFragment2 extends BaseFragment implements CompoundButton.OnChecke
             if (!dir.exists()) {
                 dir.mkdirs();
             }
-            File soundFile = new File(dir, System.currentTimeMillis() + ".amr");
-            if (!soundFile.exists()) {
+            soundFile = new File(dir, "spjsb" + ".amr");
+            if(soundFile.exists())soundFile.delete();
                 try {
                     soundFile.createNewFile();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-
-            }
             mr = new MediaRecorder();
             mr.setAudioSource(MediaRecorder.AudioSource.MIC);  //音频输入源
             mr.setOutputFormat(MediaRecorder.OutputFormat.AMR_WB);   //设置输出格式
@@ -122,4 +185,5 @@ public class MyFragment2 extends BaseFragment implements CompoundButton.OnChecke
             mr = null;
         }
      }
+
 }

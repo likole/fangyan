@@ -3,7 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/bg"
     android:orientation="vertical">
 
     <android.support.design.widget.AppBarLayout
@@ -31,31 +30,35 @@
             app:titleTextColor="#ffffff" />
     </android.support.design.widget.AppBarLayout>
 
-
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="150dp"
+        android:src="@drawable/touxiang"/>
     <RelativeLayout
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="50dp"
         android:orientation="vertical"
-        android:background="@color/md_grey_300"
+        android:background="@color/md_grey_200"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         >
 
         <Button
             android:id="@+id/manage_bt1"
-            android:background="@color/md_grey_300"
+            android:background="@color/md_grey_200"
             android:paddingLeft="10dp"
             android:gravity="left"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="登陆"
             android:textSize="25sp"
-
             />
         <Button
             android:id="@+id/manage_bt2"
-            android:background="@color/md_grey_300"
+            android:background="@color/md_grey_200"
             android:paddingLeft="10dp"
             android:gravity="left"
             android:layout_width="match_parent"
@@ -66,7 +69,7 @@
             />
         <Button
             android:id="@+id/manage_bt3"
-            android:background="@color/md_grey_300"
+            android:background="@color/md_grey_200"
             android:paddingLeft="10dp"
             android:gravity="left"
             android:layout_width="match_parent"
@@ -74,6 +77,17 @@
             android:text="修改密码"
             android:textSize="25sp"
             android:layout_below="@id/manage_bt2"
+            />
+        <Button
+            android:id="@+id/manage_bt4"
+            android:background="@color/md_grey_200"
+            android:paddingLeft="10dp"
+            android:gravity="left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="忘记密码"
+            android:textSize="25sp"
+            android:layout_below="@id/manage_bt3"
             />
     </RelativeLayout>
 

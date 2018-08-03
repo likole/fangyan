@@ -36,12 +36,12 @@ public class forget_password extends AppCompatActivity {
       public void handleMessage(android.os.Message msg){
           switch (msg.what) {
               case 1:
-                  Toast.makeText(forget_password.this, "修改成功", Toast.LENGTH_LONG).show();
+                  Toast.makeText(forget_password.this, "登陆成功", Toast.LENGTH_LONG).show();
                   Intent it =new Intent(forget_password.this,MainActivity.class);
                   startActivity(it);
                   break;
               case 0:
-                  Toast.makeText(forget_password.this, "修改失败", Toast.LENGTH_LONG).show();
+                  Toast.makeText(forget_password.this, "登陆失败", Toast.LENGTH_LONG).show();
                   break;
               default:
                   break;
@@ -74,7 +74,7 @@ public class forget_password extends AppCompatActivity {
                         map.put("school",school);
                         map.put("birthday",birthday);
 
-                        Response respose= OkHttpUtils.doPost("/login.php",map);
+                        Response respose= OkHttpUtils.doPost("/forget.php",map);
                         String s=null;
                         try{
                          s=respose.body().string();

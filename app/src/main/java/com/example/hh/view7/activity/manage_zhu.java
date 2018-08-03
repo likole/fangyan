@@ -23,7 +23,7 @@ public class manage_zhu extends AppCompatActivity {
         bt1 = (Button) findViewById(R.id.manage_bt1);
         bt2 = (Button) findViewById(R.id.manage_bt2);
         bt3 = (Button) findViewById(R.id.manage_bt3);
-
+        bt4=(Button)findViewById(R.id.manage_bt4);
 
 
         bt1.setOnClickListener(new View.OnClickListener() {
@@ -49,5 +49,12 @@ public class manage_zhu extends AppCompatActivity {
             }
         });
 
+        bt4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it=new Intent(manage_zhu.this,forget_password.class);
+                startActivity(it);
+            }
+        });
     }
 }

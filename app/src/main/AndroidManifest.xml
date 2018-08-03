@@ -28,11 +28,7 @@
             android:name=".activity.MainActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <activity android:name=".activity.login"/>
@@ -45,6 +41,14 @@
         <activity android:name=".activity.forget_password"/>
         <activity android:name=".activity.Music"/>
         <activity android:name=".activity.Date"/>
+        <activity android:name=".activity.result"/>
+        <activity android:name=".activity.Shan_ping">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
