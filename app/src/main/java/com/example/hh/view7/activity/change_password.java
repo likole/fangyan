@@ -1,13 +1,19 @@
 package com.example.hh.view7.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.hh.view7.R;
 import com.example.hh.view7.util.OkHttpUtils;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -24,6 +30,23 @@ public class change_password extends AppCompatActivity {
     private String old_password;
     private String new_password;
 
+    private Handler handler=new Handler(){
+        public void handleMessage(android.os.Message msg){
+            switch (msg.what) {
+                case 1:
+                    Toast.makeText(change_password.this, "修改密码成功", Toast.LENGTH_LONG).show();
+                    Intent it =new Intent(change_password.this,MainActivity.class);
+                    startActivity(it);
+                    break;
+                case 0:
+                    Toast.makeText(change_password.this, "修改密码失败", Toast.LENGTH_LONG).show();
+                    break;
+                default:
+                    break;
+            }
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,28 +57,42 @@ public class change_password extends AppCompatActivity {
         edit3=(EditText)findViewById(R.id.change_ed3);
         bt=(Button)findViewById(R.id.button);
 
-        username=edit1.getText().toString();
-        old_password=edit2.getText().toString();
-        new_password=edit3.getText().toString();
 
         bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                username=edit1.getText().toString();
+                old_password=edit2.getText().toString();
+                new_password=edit3.getText().toString();
+                if(!old_password.equals(new_password))
+                {
+                    Toast.makeText(change_password.this,"两次密码不一致，请重新输入",Toast.LENGTH_LONG).show();
+                    return;
+                }
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
                         Map<String,String> map=new HashMap<>();
                         map.put("username",username);
-                        map.put("old_password",old_password);
                         map.put("new_password",new_password);
 
                         Response response= OkHttpUtils.doPost("http://106.15.228.191",map);
+                        String s=null;
                         try {
-                            System.out.println(response.body().string());
+                           s=response.body().string();
                         } catch (Exception e) {
-                            System.out.println("s");
                             e.printStackTrace();
                         }
+                        JsonObject root=(JsonObject)new JsonParser().parse(s);
+                        String ok=root.get("ok").getAsString();
+                        Message msg=new Message();
+                        if(ok.equals("true")){
+                            msg.what=1;
+                        }
+                        else if (ok.equals("false")){
+                            msg.what=0;
+                        }
+                        handler.sendMessage(msg);
                     }
                 }).start();
             }

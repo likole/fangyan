@@ -10,7 +10,7 @@
         android:id="@+id/action_settings"
         android:orderInCategory="100"
         android:enabled="true"
-        android:title="公司图书管理系统"
+        android:title="迷你日历"
         app:showAsAction="never" />
 
     <item

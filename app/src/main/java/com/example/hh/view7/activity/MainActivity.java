@@ -261,10 +261,11 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-//        if (id == R.id.action_settings) {
-//            startActivityWithoutExtras(SettingActivity.class);
-//        } else if (id == R.id.action_about) {
-//            startActivityWithoutExtras(AboutActivity.class);
+        if (id == R.id.action_settings) {
+          startActivityWithoutExtras(Date.class);
+        }
+        //else if (id == R.id.action_about) {
+ //           startActivityWithoutExtras(AboutActivity.class);
 //        }
 
 
