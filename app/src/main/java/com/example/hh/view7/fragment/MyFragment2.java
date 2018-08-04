@@ -25,12 +25,15 @@ import com.example.hh.view7.R;
 import com.example.hh.view7.activity.BaseActivity;
 import com.example.hh.view7.activity.MainActivity;
 import com.example.hh.view7.activity.login;
+import com.example.hh.view7.activity.result;
 import com.example.hh.view7.util.OkHttpUtils;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
 import java.io.File;
 import java.io.IOException;
+
+import javax.xml.transform.Result;
 
 import okhttp3.Response;
 
@@ -50,20 +53,41 @@ public class MyFragment2 extends BaseFragment implements CompoundButton.OnChecke
     private TextView textView;
     private BaseActivity parentActivity;
     File soundFile;
+    protected String infor = null;
 
     AnimationDrawable drawable;
+    private static String[] PERMISSION_AUDIO = {
+            android.Manifest.permission.RECORD_AUDIO,
+            android.Manifest.permission.WRITE_EXTERNAL_STORAGE,
+            android.Manifest.permission.READ_EXTERNAL_STORAGE
+    };
 
     //***********/
-    private Handler handler =new Handler() {
+    private Handler handler = new Handler() {
         public void handleMessage(android.os.Message msg) {
             switch (msg.what) {
-                case 1:
-                    System.out.print("啦啦啦");
-                    Toast.makeText(parentActivity, "成功", Toast.LENGTH_LONG).show();
-                    break;
                 case 0:
                     Toast.makeText(parentActivity, "失败", Toast.LENGTH_LONG).show();
                     break;
+                case 1:
+                    Toast.makeText(parentActivity, "上海", Toast.LENGTH_LONG).show();
+                    break;
+                case 2:
+                    Toast.makeText(parentActivity, "南昌", Toast.LENGTH_LONG).show();
+                    break;
+                case 3:
+                    Toast.makeText(parentActivity, "闽南", Toast.LENGTH_LONG).show();
+                    break;
+                case 4:
+                    Toast.makeText(parentActivity, "客家", Toast.LENGTH_LONG).show();
+                    break;
+                case 5:
+                    Toast.makeText(parentActivity, "河北", Toast.LENGTH_LONG).show();
+                    break;
+                case 6:
+                    Toast.makeText(parentActivity, "长沙", Toast.LENGTH_LONG).show();
+                    break;
+
                 default:
                     break;
             }
@@ -74,9 +98,10 @@ public class MyFragment2 extends BaseFragment implements CompoundButton.OnChecke
     protected int setLayoutResourceID() {
         return R.layout.mf2;
     }
+
     protected void setUpData() {
 
-        ArrayAdapter<String>adapter=new ArrayAdapter<String>(parentActivity,android.R.layout.simple_list_item_1,res);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(parentActivity, android.R.layout.simple_list_item_1, res);
         acTextView.setAdapter(adapter);
         textView.setBackgroundResource(R.drawable.maikefeng);//绑定Frame动画
         drawable = (AnimationDrawable) textView.getBackground();
@@ -91,10 +116,17 @@ public class MyFragment2 extends BaseFragment implements CompoundButton.OnChecke
     }
 
     protected void setUpView() {
+
+        //权限
+
+        int permission = android.support.v4.app.ActivityCompat.checkSelfPermission(getActivity(), android.Manifest.permission.RECORD_AUDIO);
+        if (permission != android.content.pm.PackageManager.PERMISSION_GRANTED) {
+            android.support.v4.app.ActivityCompat.requestPermissions(getActivity(), PERMISSION_AUDIO, 1);
+        }
         tb = $(R.id.toggleButton);
         parentActivity = (BaseActivity) getActivity();
-        acTextView =$(R.id.autoCompleteTextView);
-         textView = $(R.id.maike2);
+        acTextView = $(R.id.autoCompleteTextView);
+        textView = $(R.id.maike2);
     }
 
     @Override
@@ -106,16 +138,17 @@ public class MyFragment2 extends BaseFragment implements CompoundButton.OnChecke
             drawable.start();
             if (!isStart) {
                 startRecord();
-                isStart =true;
+                isStart = true;
             }
         } else {
             drawable.stop();
             stopRecord();
+
             new Thread(new Runnable() {
                 @Override
                 public void run() {
-                    Response response= OkHttpUtils.doPost("/upload_file.php",soundFile,"audio/amr");
-                    String s= null;
+                    Response response = OkHttpUtils.doPost("/upload_file.php", soundFile, "audio/amr");
+                    String s = null;
                     /*try {
                         s = response.body().string();
                         System.out.println(s);
@@ -128,26 +161,40 @@ public class MyFragment2 extends BaseFragment implements CompoundButton.OnChecke
                         Toast.makeText(parentActivity,"识别失败",Toast.LENGTH_LONG).show();*/
                     try {
                         s = response.body().string();
-                        System.out.println(s);
+                        System.out.print(s);
+
+                        infor = s;
                         JsonObject root = (JsonObject) new JsonParser().parse(s);
                         String ok = root.get("ok").getAsString();
                         Message msg = new Message();
-                        System.out.print(s);
-                        if(ok.equals("true"))
-                        {
-                            msg.what =1;
-                        }
-                        else if(ok.equals("false"))
-                        {
-                            msg.what=0;
-                        }
+
+                        if (ok.equals("shanghai"))
+                            msg.what = 1;
+                        else if (ok.equals("nanchang"))
+                            msg.what = 2;
+                        else if (ok.equals("minnan"))
+                            msg.what = 3;
+                        else if (ok.equals("kejia"))
+                            msg.what = 4;
+                        else if (ok.equals("hebei"))
+                            msg.what = 5;
+                        else if (ok.equals("changsha"))
+                            msg.what = 6;
+                        else if (ok.equals("false"))
+                            msg.what = 0;
+
+
                         handler.sendMessage(msg);
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
                 }
             }).start();
-            isStart =false;
+            isStart = false;
+            //传值跳转
+            /*Intent it=new Intent(parentActivity,result.class);
+            it.putExtra("infor_result",infor);
+            startActivity(it);*/
         }
     }
 
@@ -158,12 +205,14 @@ public class MyFragment2 extends BaseFragment implements CompoundButton.OnChecke
                 dir.mkdirs();
             }
             soundFile = new File(dir, "spjsb" + ".amr");
-            if(soundFile.exists())soundFile.delete();
-                try {
-                    soundFile.createNewFile();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+            if (soundFile.exists()) soundFile.delete();
+            try {
+                soundFile.createNewFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+
             mr = new MediaRecorder();
             mr.setAudioSource(MediaRecorder.AudioSource.MIC);  //音频输入源
             mr.setOutputFormat(MediaRecorder.OutputFormat.AMR_WB);   //设置输出格式
@@ -178,12 +227,13 @@ public class MyFragment2 extends BaseFragment implements CompoundButton.OnChecke
 
         }
     }
-    private void stopRecord(){
-        if(mr != null){
+
+    private void stopRecord() {
+        if (mr != null) {
             mr.stop();
             mr.release();
             mr = null;
         }
-     }
+    }
 
 }

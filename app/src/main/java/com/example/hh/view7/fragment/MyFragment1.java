@@ -15,8 +15,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.PopupWindow;
+import android.widget.TextView;
 import android.widget.ViewFlipper;
 
 import com.example.hh.view7.R;
@@ -31,6 +33,7 @@ public class MyFragment1 extends BaseFragment {
 
     private ViewFlipper vflp_help;
 
+
     @Override
     protected int setLayoutResourceID() {
         return R.layout.activity_main1;
@@ -43,5 +46,6 @@ public class MyFragment1 extends BaseFragment {
     @Override
     protected void setUpView() {
         vflp_help = $(R.id.vflp_help);
+
     }
 }
