@@ -20,13 +20,14 @@
         app:showAsAction="never" />
 
     <item
+        android:id="@+id/main_menu_4"
+        android:icon="@drawable/tu"
+        android:title="迷你小闹钟"/>
+    <item
         android:id="@+id/main_menu_3"
         android:icon="@drawable/tu"
         android:title="娱乐小新闻"/>
-    <item
-        android:id="@+id/main_menu_4"
-        android:icon="@drawable/tu"
-        android:title="吐血小邮箱"/>
+
 
 
 </menu>

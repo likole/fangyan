@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ScrollView;
 
 import com.example.hh.view7.R;
 
@@ -31,6 +32,8 @@ public class Music extends AppCompatActivity implements View.OnClickListener{
     private boolean isRelease1 = true;
     private boolean isRelease2 = true;
 
+    private ScrollView scrollView = null;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.music);
@@ -55,6 +58,8 @@ public class Music extends AppCompatActivity implements View.OnClickListener{
 
         btn_play2.setOnClickListener(this);
         btn_stop2.setOnClickListener(this);
+
+        scrollView = (ScrollView) findViewById(R.id.id_scrollView);
     }
 
     @Override

@@ -92,6 +92,14 @@ public class login extends AppCompatActivity{
             public void onClick(View v) {
                 username=name.getText().toString();
                 password=pass.getText().toString();
+                if(username.equals("")){
+                    Toast.makeText(login.this," 请将用户名添加完整",Toast.LENGTH_LONG).show();;
+                    return;
+                }
+                if(password.equals("")){
+                    Toast.makeText(login.this," 请将密码添加完整",Toast.LENGTH_LONG).show();;
+                    return;
+                }
                 new Thread(new Runnable() {
 
                     @Override

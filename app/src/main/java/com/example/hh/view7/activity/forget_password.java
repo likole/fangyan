@@ -65,7 +65,10 @@ public class forget_password extends AppCompatActivity {
                 username=text1.getText().toString();
                 school=text2.getText().toString();
                 birthday=text3.getText().toString();
-
+                if(username.equals("")||school.equals("")||birthday.equals("")){
+                    Toast.makeText(forget_password.this," 请将信息添加完整",Toast.LENGTH_LONG).show();;
+                    return;
+                }
                 new Thread(new Runnable() {
                     @Override
                     public void run() {

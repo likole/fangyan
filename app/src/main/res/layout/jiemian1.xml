@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TimePicker
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:timePickerMode="spinner"
+        android:id="@+id/time"
+       />
+    <Button
+        android:layout_below="@id/time"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/btn_set"
+        android:text="设置闹钟"/>
+
+    <Button
+        android:layout_below="@id/time"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/btn_cancel"
+        android:text="关闭闹钟"
+        android:visibility="gone"/>
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<?xml version="1.0"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    tools:context=".LLL"
+    android:orientation="vertical">
+
+    <Chronometer
+        android:id="@+id/chronometer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#FFCCCC"
+        android:textSize="60dip"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/chronometer"
+        android:id="@+id/lieb">
+
+        <Button
+            android:id="@+id/jishi1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="开始计时"/>
+
+        <Button
+            android:id="@+id/jishi2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="停止计时"/>
+
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="重置"/>
+
+        <Button
+            android:id="@+id/btn_format"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="格式化"/>
+       </LinearLayout>
+
+
+</RelativeLayout>-->

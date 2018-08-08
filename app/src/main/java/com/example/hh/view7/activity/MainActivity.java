@@ -268,6 +268,8 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
         else if (id == R.id.action_about) {
             startActivityWithoutExtras(Mo.class);
         }
+        else if(id==R.id.main_menu_4)
+            startActivityWithoutExtras(LLL.class);
 
 
         return super.onOptionsItemSelected(item);

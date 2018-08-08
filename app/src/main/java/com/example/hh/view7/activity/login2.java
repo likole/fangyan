@@ -78,11 +78,11 @@ public class login2 extends AppCompatActivity {
                 password2=editText8.getText().toString();
                 school=editText9.getText().toString();
                 birthday=editText10.getText().toString();
-
-                if(!password1.equals(password2)) {
-                    Toast.makeText(login2.this, "两次密码不一致，请重新输入", Toast.LENGTH_LONG).show();
+                if(username.equals("")||password2.equals("")||password1.equals("")||school.equals("")||birthday.equals("")){
+                    Toast.makeText(login2.this," 请将信息添加完整",Toast.LENGTH_LONG).show();;
                     return;
                 }
+
 
                 new Thread(new Runnable() {
                     @Override

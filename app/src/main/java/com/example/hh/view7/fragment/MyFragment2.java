@@ -65,32 +65,9 @@ public class MyFragment2 extends BaseFragment implements CompoundButton.OnChecke
     //***********/
     private Handler handler = new Handler() {
         public void handleMessage(android.os.Message msg) {
-            switch (msg.what) {
-                case 0:
-                    Toast.makeText(parentActivity, "失败", Toast.LENGTH_LONG).show();
-                    break;
-                case 1:
-                    Toast.makeText(parentActivity, "上海", Toast.LENGTH_LONG).show();
-                    break;
-                case 2:
-                    Toast.makeText(parentActivity, "南昌", Toast.LENGTH_LONG).show();
-                    break;
-                case 3:
-                    Toast.makeText(parentActivity, "闽南", Toast.LENGTH_LONG).show();
-                    break;
-                case 4:
-                    Toast.makeText(parentActivity, "客家", Toast.LENGTH_LONG).show();
-                    break;
-                case 5:
-                    Toast.makeText(parentActivity, "河北", Toast.LENGTH_LONG).show();
-                    break;
-                case 6:
-                    Toast.makeText(parentActivity, "长沙", Toast.LENGTH_LONG).show();
-                    break;
-
-                default:
-                    break;
-            }
+            Intent it=new Intent(parentActivity,result.class);
+            it.putExtra("infor_result",infor);
+            startActivity(it);
         }
     };
 
@@ -149,39 +126,41 @@ public class MyFragment2 extends BaseFragment implements CompoundButton.OnChecke
                 public void run() {
                     Response response = OkHttpUtils.doPost("/upload_file.php", soundFile, "audio/amr");
                     String s = null;
-                    /*try {
-                        s = response.body().string();
-                        System.out.println(s);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                    if(s!=null)
-                        Toast.makeText(parentActivity,s,Toast.LENGTH_LONG).show();
-                    else
-                        Toast.makeText(parentActivity,"识别失败",Toast.LENGTH_LONG).show();*/
                     try {
                         s = response.body().string();
                         System.out.print(s);
-
-                        infor = s;
                         JsonObject root = (JsonObject) new JsonParser().parse(s);
                         String ok = root.get("ok").getAsString();
                         Message msg = new Message();
 
                         if (ok.equals("shanghai"))
-                            msg.what = 1;
+                        {
+                            msg.what = 1;infor="上海话";
+                        }
                         else if (ok.equals("nanchang"))
-                            msg.what = 2;
+                        {
+                            msg.what = 2;infor="南昌话";
+                        }
                         else if (ok.equals("minnan"))
-                            msg.what = 3;
+                        {
+                            msg.what = 3;infor="闽南话";
+                        }
                         else if (ok.equals("kejia"))
-                            msg.what = 4;
+                        {
+                            msg.what = 4;infor="客家话";
+                        }
                         else if (ok.equals("hebei"))
-                            msg.what = 5;
+                        {
+                            msg.what = 5;infor="河北话";
+                        }
                         else if (ok.equals("changsha"))
-                            msg.what = 6;
+                        {
+                            msg.what = 6;infor="长沙话";
+                        }
                         else if (ok.equals("false"))
-                            msg.what = 0;
+                        {
+                            msg.what = 0;infor="无法识别";
+                        }
 
 
                         handler.sendMessage(msg);
@@ -191,10 +170,6 @@ public class MyFragment2 extends BaseFragment implements CompoundButton.OnChecke
                 }
             }).start();
             isStart = false;
-            //传值跳转
-            /*Intent it=new Intent(parentActivity,result.class);
-            it.putExtra("infor_result",infor);
-            startActivity(it);*/
         }
     }
 

@@ -65,6 +65,10 @@ public class change_password extends AppCompatActivity {
                 old_password=edit2.getText().toString();
                 new_password=edit3.getText().toString();
 
+                if(username.equals("")||old_password.equals("")||new_password.equals("")){
+                    Toast.makeText(change_password.this," 请将信息添加完整",Toast.LENGTH_LONG).show();;
+                    return;
+                }
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
