@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:id="@+id/scrol">
 
     <RelativeLayout
         android:id="@+id/r1"
@@ -24,8 +25,6 @@
             android:background="#5090EE90"
             android:textColor="#000000" />
 
-
-
         <ViewFlipper
             android:layout_below="@+id/hello11"
             android:layout_height="200dp"
@@ -36,18 +35,37 @@
             android:inAnimation="@anim/right_in"
             android:id="@+id/vflp_help">
 
-        <include layout="@layout/page_help_one"/>
+            <include layout="@layout/page_help_one"/>
 
-        <include layout="@layout/page_help_two"/>
+            <include layout="@layout/page_help_two"/>
 
-        <include layout="@layout/page_help_three"/>
+            <include layout="@layout/page_help_three"/>
 
-        <include layout="@layout/page_help_four"/>
+            <include layout="@layout/page_help_four"/>
 
-    </ViewFlipper>
+        </ViewFlipper>
 
+
+    <TextView
+        android:id="@+id/tt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="热点平台"
+        android:layout_below="@id/vflp_help"
+        android:paddingLeft="20dp"
+        android:textSize="30sp"
+        />
+
+    <com.example.hh.view7.MyList
+        android:id="@+id/list"
+        android:layout_below="@id/tt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </com.example.hh.view7.MyList>
 
 
     </RelativeLayout>
 
-</RelativeLayout>
+</ScrollView>

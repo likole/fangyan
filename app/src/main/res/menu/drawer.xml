@@ -21,7 +21,7 @@
                 <item
                     android:id="@+id/navigation_item_borrow"
                     android:icon="@drawable/library"
-                    android:title="方言Map" />
+                    android:title="迷你动画" />
             </menu>
         </item>
         <item android:title="其他">

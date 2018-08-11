@@ -9,32 +9,33 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.hh.view7.R;
-import com.example.hh.view7.bean.Icon;
-
 import java.util.ArrayList;
 
-public abstract class MyAdapter<T> extends BaseAdapter {
+/**
 
-    private Context mContext;
-    private ArrayList<Icon> mData;
+ */
+public abstract class MyAdapter1<T> extends BaseAdapter {
 
-    public MyAdapter() {
+    private ArrayList<T> mData;
+    private int mLayoutRes;           //布局id
+
+
+    public MyAdapter1() {
     }
 
-    public MyAdapter(ArrayList<Icon> mData, Context mContext) {
+    public MyAdapter1(ArrayList<T> mData, int mLayoutRes) {
         this.mData = mData;
-        this.mContext = mContext;
+        this.mLayoutRes = mLayoutRes;
     }
 
     @Override
     public int getCount() {
-        return mData.size();
+        return mData != null ? mData.size() : 0;
     }
 
     @Override
-    public Object getItem(int position) {
-        return null;
+    public T getItem(int position) {
+        return mData.get(position);
     }
 
     @Override
@@ -44,22 +45,53 @@ public abstract class MyAdapter<T> extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        ViewHolder holder = null;
-        if (convertView == null) {
-            convertView = LayoutInflater.from(mContext).inflate(R.layout.item_grid_icon, parent, false);
-            holder = new ViewHolder();
-            holder.img_icon = (ImageView) convertView.findViewById(R.id.img_icon);
-            holder.txt_content = (TextView) convertView.findViewById(R.id.txt_icon);
-            convertView.setTag(holder);
-        } else {
-            holder = (ViewHolder) convertView.getTag();
-        }
-        holder.img_icon.setImageResource(mData.get(position).getiId());
-        holder.txt_content.setText(mData.get(position).getiName());
-        return convertView;
+        ViewHolder holder = ViewHolder.bind(parent.getContext(), convertView, parent, mLayoutRes
+                , position);
+        bindView(holder, getItem(position));
+        return holder.getItemView();
     }
 
     public abstract void bindView(ViewHolder holder, T obj);
+
+    //添加一个元素
+    public void add(T data) {
+        if (mData == null) {
+            mData = new ArrayList<>();
+        }
+        mData.add(data);
+        notifyDataSetChanged();
+    }
+
+    //往特定位置，添加一个元素
+    public void add(int position, T data) {
+        if (mData == null) {
+            mData = new ArrayList<>();
+        }
+        mData.add(position, data);
+        notifyDataSetChanged();
+    }
+
+    public void remove(T data) {
+        if (mData != null) {
+            mData.remove(data);
+        }
+        notifyDataSetChanged();
+    }
+
+    public void remove(int position) {
+        if (mData != null) {
+            mData.remove(position);
+        }
+        notifyDataSetChanged();
+    }
+
+    public void clear() {
+        if (mData != null) {
+            mData.clear();
+        }
+        notifyDataSetChanged();
+    }
+
 
     public static class ViewHolder {
 
@@ -67,12 +99,6 @@ public abstract class MyAdapter<T> extends BaseAdapter {
         private View item;                  //存放convertView
         private int position;               //游标
         private Context context;            //Context上下文
-
-        ImageView img_icon;
-        TextView txt_content;
-
-        private ViewHolder() {
-        }
 
         //构造方法，完成相关初始化
         private ViewHolder(Context context, ViewGroup parent, int layoutRes) {
@@ -107,6 +133,7 @@ public abstract class MyAdapter<T> extends BaseAdapter {
             return t;
         }
 
+
         /**
          * 获取当前条目
          */
@@ -124,7 +151,7 @@ public abstract class MyAdapter<T> extends BaseAdapter {
         /**
          * 设置文字
          */
-        public ViewHolder setText(int id, CharSequence text) {
+        public ViewHolder setText(int id, String text) {
             View view = getView(id);
             if (view instanceof TextView) {
                 ((TextView) view).setText(text);
@@ -171,6 +198,8 @@ public abstract class MyAdapter<T> extends BaseAdapter {
         }
 
         //其他方法可自行扩展
+
     }
+
 }
 

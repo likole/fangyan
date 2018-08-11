@@ -157,6 +157,14 @@ public class MyFragment2 extends BaseFragment implements CompoundButton.OnChecke
                         {
                             msg.what = 6;infor="长沙话";
                         }
+                        else if (ok.equals("sichuan"))
+                        {
+                            msg.what = 7;infor="四川话";
+                        }
+                        else if (ok.equals("hefei"))
+                        {
+                            msg.what = 8;infor="合肥话";
+                        }
                         else if (ok.equals("false"))
                         {
                             msg.what = 0;infor="无法识别";

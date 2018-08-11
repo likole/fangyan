@@ -3,14 +3,15 @@ package com.example.hh.view7.bean;
 public class Icon {
     private int iId;
     private String iName;
-
+    private String url;
     public Icon() {
 
     }
 
-    public Icon(int iId, String iName) {
+    public Icon(int iId, String iName,String url) {
         this.iId = iId;
         this.iName = iName;
+        this.url=url;
     }
 
     public int getiId() {
@@ -27,5 +28,12 @@ public class Icon {
 
     public void setiName(String iName) {
         this.iName = iName;
+    }
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 }

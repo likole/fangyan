@@ -22,7 +22,7 @@
         android:focusable="true"
         android:focusableInTouchMode="true"
         android:singleLine="true"
-        android:text="@string/hello_world"
+        android:text="哈哈哈哈，验证你说的方言准不准确的机会来了，快来体验吧"
         android:textColor="#000" />
 
     <TextView
@@ -51,9 +51,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_marginTop="12dp"
-        android:text="附近推荐"
+        android:text="来测试一波你的方言是不是标准～～"
         android:completionThreshold="1"
-        android:textColorHint="@color/md_grey_500"
+        android:textColorHint="@color/md_grey_300"
         android:textSize="20dp" />
 
 </RelativeLayout>

@@ -68,7 +68,7 @@ public class Mo extends AppCompatActivity {
                 {
                     //获得checkBox的文本内容
                     //String text= checkBox1.getText().toString();
-                    Toast.makeText(Mo.this, "这款APP是是一个以辨别各地方言的语言识别类软件，由于能力有限（几个即将步入大二的菜鸟合力完成），目前仅能实现6种方言（长沙话、河北话、闽南话、客家话、上海话和南昌话六种地方方言），但是方言识别准确率高达96%以上", Toast.LENGTH_LONG).show();
+                    Toast.makeText(Mo.this, "这款APP是是一个以辨别各地方言的语言识别类软件，由于能力有限（几个即将步入大二的菜鸟合力完成），目前仅能实现6种方言（长沙话、河北话、闽南话、客家话、上海话、四川话、合肥话和南昌话八种地方方言），但是方言识别准确率高达96%以上", Toast.LENGTH_LONG).show();
                 }
 
             }

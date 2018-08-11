@@ -31,25 +31,12 @@
             app:titleTextColor="#ffffff" />
     </android.support.design.widget.AppBarLayout>
 
-    <TextView
-        android:id="@+id/hello11"
-        android:layout_below="@+id/haha"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="2dp"
-        android:ellipsize="marquee"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
-        android:singleLine="true"
-        android:text="@string/hello_world"
-        android:textColor="#336666"
-        android:textSize="20sp"
-        android:layout_marginTop="5dp"
+
         />
     <CalendarView
         android:layout_below="@+id/hello11"
         android:id="@+id/calendarView"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 </RelativeLayout>

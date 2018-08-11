@@ -18,7 +18,6 @@ import com.example.hh.view7.R;
 import com.example.hh.view7.activity.BaseActivity;
 import com.example.hh.view7.activity.BrowserActivity;
 import com.example.hh.view7.adapter.My3Adapter;
-import com.example.hh.view7.adapter.MyAdapter;
 import com.example.hh.view7.bean.Bean3;
 import com.example.hh.view7.bean.Icon;
 
@@ -26,7 +25,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Jay on 2015/8/28 0028.
+.
  */
 public class MyFragment3 extends BaseFragment {
 
@@ -70,7 +69,7 @@ public class MyFragment3 extends BaseFragment {
         dataList.add(new Bean3("笑话8", "http://www.360doc.com/content/16/0819/17/773384_584370456.shtml"));
         dataList.add(new Bean3("笑话9", "http://www.360doc.com/content/17/1215/09/8510298_713243227.shtml"));
 
-        Toast.makeText(parentActivity, "下拉获取更多内容", Toast.LENGTH_LONG).show();
+       // Toast.makeText(parentActivity, "下拉获取更多内容", Toast.LENGTH_LONG).show();
 
 //        final ArrayAdapter<String> adapter0= new ArrayAdapter<String>(parentActivity,android.R.layout.simple_list_item_1,android.R.id.text1,dataList);
         final My3Adapter adapter0 = new My3Adapter(dataList, getMContext());
@@ -92,10 +91,10 @@ public class MyFragment3 extends BaseFragment {
                     public void run() {
                         swipeRefreshLayout.setRefreshing(false);
                         Toast.makeText(parentActivity, "加载完成", Toast.LENGTH_LONG).show();
-                       /* for(int i=0;i<10;i++)
+                       for(int i=0;i<20;i++)
                         {
-                            dataList.add(new Bean3("spjsb","http://www.taobao.com            vvb"));
-                        }*/
+                            dataList.add(new Bean3("笑话"+(i+10),"http://www.taobao.com"));
+                        }
                         adapter0.notifyDataSetChanged();
                     }
                 }, 4000);
