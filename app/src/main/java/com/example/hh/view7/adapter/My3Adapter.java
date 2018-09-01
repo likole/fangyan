@@ -10,6 +10,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.hh.view7.R;
 import com.example.hh.view7.activity.BrowserActivity;
 import com.example.hh.view7.bean.Bean3;
 
@@ -47,15 +48,16 @@ public class My3Adapter extends BaseAdapter {
     public View getView(final int position, View convertView, ViewGroup parent) {
         ViewHolder holder = null;
         if (convertView == null) {
-            convertView = LayoutInflater.from(mContext).inflate(android.R.layout.simple_list_item_1, parent, false);
+            convertView = LayoutInflater.from(mContext).inflate(R.layout.item_grid_icon, parent, false);
             holder = new ViewHolder();
-//            holder.img_icon = (ImageView) convertView.findViewById(R.id.img_icon);
-            holder.txt_content = (TextView) convertView.findViewById(android.R.id.text1);
+           holder.img_icon = (ImageView) convertView.findViewById(R.id.img_icon);
+            holder.txt_content = (TextView) convertView.findViewById(R.id.txt_icon);
+
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
-//        holder.img_icon.setImageResource(mData.get(position).getiId());
+       holder.img_icon.setImageResource(mData.get(position).getiId());
         holder.txt_content.setText(mData.get(position).getContent());
 //        holder.setOnClickListener(position,new View.OnClickListener(){
 //
@@ -71,7 +73,8 @@ public class My3Adapter extends BaseAdapter {
     }
 
     public void bindView(ViewHolder holder, Bean3 obj){
-        holder.setText(android.R.id.text1, obj.getContent());
+        holder.setText(R.id.text1, obj.getContent());
+        holder.setImageResource(R.id.img_icon, obj.getiId());
     }
 
     public static class ViewHolder {
@@ -81,7 +84,7 @@ public class My3Adapter extends BaseAdapter {
         private int position;               //游标
         private Context context;            //Context上下文
 
-//        ImageView img_icon;
+        ImageView img_icon;
         TextView txt_content;
 
         private ViewHolder() {

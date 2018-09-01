@@ -8,10 +8,7 @@
     <!--app:showAsAction="ifRoom" /      android:orderInCategory="100">-->
 
 
-    <item
-        android:id="@+id/action_about"
-        android:icon="@drawable/compass"
-        android:title="介绍"/>
+
 
     <item
         android:id="@+id/date"
@@ -19,14 +16,11 @@
         android:title="迷你日历"
         app:showAsAction="never" />
 
+
     <item
-        android:id="@+id/main_menu_4"
-        android:icon="@drawable/tu"
-        android:title="迷你小闹钟"/>
-    <item
-        android:id="@+id/main_menu_3"
-        android:icon="@drawable/tu"
-        android:title="娱乐小新闻"/>
+        android:id="@+id/action_about"
+        android:icon="@drawable/compass"
+        android:title="意见和反馈"/>
 
 
 

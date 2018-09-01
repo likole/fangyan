@@ -1,12 +1,17 @@
 package com.example.hh.view7.bean;
 
 public class Bean3 {
+    private int iId;
     private String content;
     private String url;
 
-    public Bean3(String content, String url) {
+    public Bean3(String content, String url,int id) {
         this.content = content;
         this.url = url;
+        this.iId=id;
+    }
+    public int getiId() {
+        return iId;
     }
 
     public String getContent() {
@@ -19,6 +24,10 @@ public class Bean3 {
 
     public String getUrl() {
         return url;
+    }
+
+    public void setiId(int iId) {
+        this.iId = iId;
     }
 
     public void setUrl(String url) {

@@ -53,21 +53,18 @@ public class MyFragment3 extends BaseFragment {
 
     @Override
     protected void setUpData() {
-//        final List<String> dataList=new ArrayList<>();
-//        dataList.add("");
-//        dataList.add("据媒体报道，语言识别在联盟炸开了");
-//        dataList.add("许多背井离乡的学子认为语音识别提升自己家乡自豪感");
+
         final ArrayList<Bean3> dataList = new ArrayList<Bean3>();
 
-        dataList.add(new Bean3("笑话1", "http://www.360doc.com/content/16/0620/17/4666759_569313579.shtml"));
-        dataList.add(new Bean3("笑话2", "http://www.pig66.com/show-1714-1114835-1.html"));
-        dataList.add(new Bean3("笑话3", "http://baijiahao.baidu.com/s?id=1602480786079558486&wfr=spider&for=pc"));
-        dataList.add(new Bean3("笑话4", "http://baijiahao.baidu.com/s?id=1596326167531023513&wfr=spider&for=pc"));
-        dataList.add(new Bean3("笑话5", "https://baijiahao.baidu.com/s?id=1573494971428634&wfr=spider&for=pc"));
-        dataList.add(new Bean3("笑话6", "https://zhidao.baidu.com/question/23189908.html"));
-        dataList.add(new Bean3("笑话7", "http://www.360doc.com/content/17/0616/01/773384_663515322.shtml"));
-        dataList.add(new Bean3("笑话8", "http://www.360doc.com/content/16/0819/17/773384_584370456.shtml"));
-        dataList.add(new Bean3("笑话9", "http://www.360doc.com/content/17/1215/09/8510298_713243227.shtml"));
+        dataList.add(new Bean3("笑话1", "http://www.360doc.com/content/16/0620/17/4666759_569313579.shtml",R.mipmap.h1));
+        dataList.add(new Bean3("笑话2", "http://www.pig66.com/show-1714-1114835-1.html",R.mipmap.h2));
+        dataList.add(new Bean3("笑话3", "http://baijiahao.baidu.com/s?id=1602480786079558486&wfr=spider&for=pc",R.mipmap.h3));
+        dataList.add(new Bean3("笑话4", "http://baijiahao.baidu.com/s?id=1596326167531023513&wfr=spider&for=pc",R.mipmap.h4));
+        dataList.add(new Bean3("笑话5", "https://baijiahao.baidu.com/s?id=1573494971428634&wfr=spider&for=pc",R.mipmap.h5));
+        dataList.add(new Bean3("笑话6", "https://zhidao.baidu.com/question/23189908.html",R.mipmap.h6));
+        dataList.add(new Bean3("笑话7", "http://www.360doc.com/content/17/0616/01/773384_663515322.shtml",R.mipmap.h7));
+        dataList.add(new Bean3("笑话8", "http://www.360doc.com/content/16/0819/17/773384_584370456.shtml",R.mipmap.h8));
+        dataList.add(new Bean3("笑话9", "http://www.360doc.com/content/17/1215/09/8510298_713243227.shtml",R.mipmap.h9));
 
        // Toast.makeText(parentActivity, "下拉获取更多内容", Toast.LENGTH_LONG).show();
 
@@ -93,7 +90,7 @@ public class MyFragment3 extends BaseFragment {
                         Toast.makeText(parentActivity, "加载完成", Toast.LENGTH_LONG).show();
                        for(int i=0;i<20;i++)
                         {
-                            dataList.add(new Bean3("笑话"+(i+10),"http://www.taobao.com"));
+                            dataList.add(new Bean3("笑话"+(i+10),"http://www.taobao.com",R.mipmap.about));
                         }
                         adapter0.notifyDataSetChanged();
                     }

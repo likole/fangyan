@@ -49,8 +49,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.ClockActivity"/>
-        <activity android:name=".activity.LLL"/>
 
     </application>
 

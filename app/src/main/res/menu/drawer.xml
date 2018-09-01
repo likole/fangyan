@@ -12,25 +12,14 @@
             android:id="@+id/navigation_item_user"
             android:icon="@drawable/account"
             android:title="用户管理" />
-        <item android:title="方言">
-            <menu>
-                <item
-                    android:id="@+id/navigation_item_addbook"
-                    android:icon="@drawable/yuyin"
-                    android:title="方言Music" />
-                <item
-                    android:id="@+id/navigation_item_borrow"
-                    android:icon="@drawable/library"
-                    android:title="迷你动画" />
-            </menu>
-        </item>
+        <item
+            android:id="@+id/navigation_item_addbook"
+            android:icon="@drawable/yuyin"
+            android:title="方言Music" />
+
+
         <item android:title="其他">
             <menu>
-                <!--<item
-                    android:id="@+id/navigation_item_data"
-                    android:icon="@drawable/setting"
-                    android:title="设置" />
-                    -->
                 <item
                     android:id="@+id/navigation_item_about"
                     android:icon="@drawable/information_outline"
@@ -40,6 +29,6 @@
         <item
             android:id="@+id/navigation_item_logout"
             android:icon="@drawable/exit_to_app"
-            android:title="退出登录" />
+            android:title="退出" />
     </group>
 </menu>

@@ -209,10 +209,6 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
                         Intent intent3=new Intent(MainActivity.this,Music.class);
                         startActivity(intent3);
                         break;
-                    case R.id.navigation_item_borrow:
-                        Intent intent4=new Intent(MainActivity.this,login.class);
-                        startActivity(intent4);
-                        break;
                     case R.id.navigation_item_about:
                         Intent intent5=new Intent(MainActivity.this,Mo.class);
                         startActivity(intent5);
@@ -266,11 +262,8 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
           startActivityWithoutExtras(Date.class);
         }
         else if (id == R.id.action_about) {
-            startActivityWithoutExtras(Mo.class);
+            startActivityWithoutExtras(pingjia.class);
         }
-        else if(id==R.id.main_menu_4)
-            startActivityWithoutExtras(LLL.class);
-
 
         return super.onOptionsItemSelected(item);
     }
