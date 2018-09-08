@@ -17,7 +17,7 @@
                     android:text="Music"
                     android:layout_marginTop="15dp"
                     android:layout_marginLeft="15dp"
-                    android:textSize="25sp"/>
+                    android:textSize="20sp"/>
 
                 <android.support.v7.widget.Toolbar
                     android:id="@+id/toolbar"

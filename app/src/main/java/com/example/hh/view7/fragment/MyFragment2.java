@@ -79,7 +79,7 @@ public class MyFragment2 extends BaseFragment implements CompoundButton.OnChecke
     protected void setUpData() {
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(parentActivity, android.R.layout.simple_list_item_1, res);
-        acTextView.setAdapter(adapter);
+//        acTextView.setAdapter(adapter);
         textView.setBackgroundResource(R.drawable.maikefeng);//绑定Frame动画
         drawable = (AnimationDrawable) textView.getBackground();
         getMainLooper().myQueue().addIdleHandler(new MessageQueue.IdleHandler() {
@@ -102,7 +102,7 @@ public class MyFragment2 extends BaseFragment implements CompoundButton.OnChecke
         }
         tb = $(R.id.toggleButton);
         parentActivity = (BaseActivity) getActivity();
-        acTextView = $(R.id.autoCompleteTextView);
+       // acTextView = $(R.id.autoCompleteTextView);
         textView = $(R.id.maike2);
     }
 

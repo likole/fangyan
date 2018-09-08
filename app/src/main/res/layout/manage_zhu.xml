@@ -14,7 +14,7 @@
             android:layout_marginLeft="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:paddingTop="2dp"
             android:layout_marginTop="12dp"
             android:text="账号管理"/>
@@ -54,7 +54,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="登陆"
-            android:textSize="25sp"
+            android:paddingTop="7dp"
+            android:textSize="20sp"
             />
         <Button
             android:id="@+id/manage_bt2"
@@ -64,7 +65,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="注册"
-            android:textSize="25sp"
+            android:paddingTop="7dp"
+            android:textSize="20sp"
             android:layout_below="@id/manage_bt1"
             />
         <Button
@@ -75,7 +77,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="修改密码"
-            android:textSize="25sp"
+            android:paddingTop="7dp"
+            android:textSize="20sp"
             android:layout_below="@id/manage_bt2"
             />
         <Button
@@ -86,7 +89,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="忘记密码"
-            android:textSize="25sp"
+            android:paddingTop="7dp"
+            android:textSize="20sp"
             android:layout_below="@id/manage_bt3"
             />
     </RelativeLayout>

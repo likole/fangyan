@@ -53,7 +53,7 @@
         android:text="热点平台"
         android:layout_below="@id/vflp_help"
         android:paddingLeft="20dp"
-        android:textSize="30sp"
+        android:textSize="20sp"
         />
 
     <com.example.hh.view7.MyList

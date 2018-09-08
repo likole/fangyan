@@ -19,8 +19,8 @@
                     <ImageView
                         android:layout_marginTop="5dp"
                         android:id="@+id/img"
-                        android:layout_width="20pt"
-                        android:layout_height="20pt"
+                        android:layout_width="15pt"
+                        android:layout_height="15pt"
                         android:src="@mipmap/child" />
 
                     <TextView
@@ -30,7 +30,7 @@
                         android:layout_marginTop="10dp"
                         android:text="方言笑話"
                         android:textColor="@color/colorPrimary"
-                        android:textSize="25dp" />
+                        android:textSize="20dp" />
 
          </RelativeLayout>
 

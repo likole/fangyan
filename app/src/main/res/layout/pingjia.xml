@@ -15,11 +15,11 @@
             android:id="@+id/text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginRight="30dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:text="用户评价"
-            android:textSize="25sp" />
+            android:textSize="20sp" />
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
